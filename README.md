@@ -25,3 +25,30 @@ To add new packages to the virtual environments, you have to create a file calle
 ```
 pip install -r requirements.txt
 ```
+
+To test code in local, just run:
+```
+functions-framework --target hello_world --debug --port 8000
+```
+
+## Deploying GCP Functions
+To deploy into GCP, you have to :
+
+Get your project ID by running this command:
+```
+gcloud projects list
+```
+
+Set your project ID:
+
+```
+gcloud config set project <PROJECT_ID>
+```
+
+Enable Cloud Build API by visiting -> [Cloud Build API](https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=272914054599)
+
+
+And finally, deploy your functions, by running:
+```
+gcloud functions deploy hello_world --runtime python38 --trigger-http
+```
