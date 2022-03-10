@@ -52,3 +52,6 @@ And finally, deploy your functions, by running:
 ```
 gcloud functions deploy hello_world --runtime python38 --trigger-http
 ```
+
+## Deploying cloud functions with environment variables
+We have to create an `.env.yaml` and a `requirements.txt` in the same directory where `main.py` file is located.
