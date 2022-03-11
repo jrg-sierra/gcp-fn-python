@@ -66,3 +66,10 @@ gcloud components update
 gcloud pubsub topics create [TOPIC_NAME]
 gcloud pubsub subscriptions create cron-sub --topic [TOPIC_NAME]
 ```
+
+## Delete Cloud Functions
+Run following:
+
+```
+gcloud functions delete [FUNCTION_NAME]
+```
