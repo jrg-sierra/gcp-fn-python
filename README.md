@@ -55,3 +55,14 @@ gcloud functions deploy hello_world --runtime python38 --trigger-http
 
 ## Deploying cloud functions with environment variables
 We have to create an `.env.yaml` and a `requirements.txt` in the same directory where `main.py` file is located.
+
+
+## Schedule Cloud Functions
+Execute following commands:
+
+```
+gcloud components install beta
+gcloud components update
+gcloud pubsub topics create [TOPIC_NAME]
+gcloud pubsub subscriptions create cron-sub --topic [TOPIC_NAME]
+```
